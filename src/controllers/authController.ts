@@ -193,7 +193,7 @@ export const forgotPassword = async (req: Request, res: Response): Promise<void>
       reset_token_expires: expires.toISOString(),
     }).eq('id', user.id);
 
-    const frontendUrl = process.env.FRONTEND_URL || 'http://localhost:5173';
+    const frontendUrl = process.env.FRONTEND_URL || 'https://fintrack-frontend.onrender.com';
     const resetUrl = `${frontendUrl}/reset-password?token=${rawToken}&email=${encodeURIComponent(email)}`;
 
     // Until a real email provider is wired up, the link is returned here so
