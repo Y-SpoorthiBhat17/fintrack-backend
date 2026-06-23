@@ -39,7 +39,7 @@ async function callOpenRouter(apiKey: string, prompt: string): Promise<string> {
         headers: {
           'Authorization': `Bearer ${apiKey}`,
           'Content-Type': 'application/json',
-          'HTTP-Referer': process.env.FRONTEND_URL || 'https://fintrack-frontend.onrender.com',
+          'HTTP-Referer': process.env.FRONTEND_URL || 'https://fintrack-frontend-aj6y.onrender.com',
           'X-Title': 'FinTrack Pro',
         },
         body: JSON.stringify({
